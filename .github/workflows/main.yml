@@ -19,9 +19,6 @@ jobs:
       
       - name: Construir app con node
         run: npm install
-      
-      - name: Ejecutar pruebas
-        run: npm test
 
       - name: Verificar si app.js existe
         run: |
@@ -30,3 +27,6 @@ jobs:
             exit 1
           fi
           echo "Se encontro app.js. Continuando con el workflow."
+
+      - name: Ejecutar pruebas
+        run: npm test
